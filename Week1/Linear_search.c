@@ -37,3 +37,26 @@ int main(){
 
 }
 
+/* 1. 
+    INPUT:
+    Enter size of array: 5
+    Enter elements of array: 1 2 3 4 5
+    search element: 3
+
+    OUTPUT:
+    Element found at 2 position.
+    
+    2.
+     INPUT:
+     Enter size of array: 5
+     Enter elements of array: 1 2 3 4 5
+     search element: 6
+
+     OUTPUT:
+     Element not found.     
+         
+      */
+                            
+
+    
+
