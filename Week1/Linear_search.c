@@ -13,7 +13,6 @@ int linear_search(int arr[], int size, int element){
 
 }
 
-
 int main(){
     int size;
     printf("Enter size : ");
