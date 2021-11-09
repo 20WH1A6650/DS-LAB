@@ -36,3 +36,25 @@ int main(){
   return 0;
  }
 
+/*  1. 
+      INPUT:
+      Enter size of array: 5
+      Enter elements of array: 4 5 6 7 8
+      search element: 8
+      
+      OUTPUT:
+      Element found at 4 position.
+      
+     2.
+      INPUT:
+      Enter size of array: 4
+      Enter elements of array: 6 7 8 9
+      search element: 4
+      
+      OUTPUT:
+      Element not found
+
+    */
+     
+
+
