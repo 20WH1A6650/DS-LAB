@@ -42,3 +42,25 @@ int main(){
   return 0;
   }
 
+/*  1.
+     INPUT:
+     Enter size of array: 5
+     Enter elements of array in sorted order: 1 2 3 4 5
+     Enter search element: 2
+     
+     OUTPUT:
+     Element found at 1 position.
+     
+     2.
+      INPUT:
+      Enter size of array: 4
+      Enter elements of array in sorted order: 4 5 6 7
+      Enter search element: 8
+      
+      OUTPUT:
+      Element not found.
+      
+     */
+
+     
+
