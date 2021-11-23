@@ -25,7 +25,8 @@ struct node* Create(){
 				temp = temp -> link;
 			}
 			temp -> link = cur;
-	}
+         
+		}
 	}
 return head;
 }
