@@ -107,9 +107,9 @@ void Display(struct node*){
 	printf("NULL \n");
 }
 
-void reversedisplay(struct node*){
+void reverse_display(struct node* head){
 	if(head != NULL){
-		reversedisplay(head -> link);
+		reverse_display(head -> link);
 		printf("%d", head -> data);
 	}
 }
@@ -206,7 +206,277 @@ int main(){
 
 	}
 
-}			
+}	
+
+/*  OUTPUT:
+1.Create 
+2.Insert_begin 
+3.Insert_end 
+4.Insert_pos 
+5.Delete_begin 
+6.Delete_end 
+7.Delete_pos 
+8.Display 
+9.Reverse_display 
+10.Search 
+11.Sort 
+12.Exit 
+Enter choice:1
+Enter no. of nodes:4
+Enter data:1 2 3 4
+Enter data:Enter data:Enter data:1.Create 
+2.Insert_begin 
+3.Insert_end 
+4.Insert_pos 
+5.Delete_begin 
+6.Delete_end 
+7.Delete_pos 
+8.Display 
+9.Reverse_display 
+10.Search 
+11.Sort 
+12.Exit 
+Enter choice:8
+1 -> 2 -> 3 -> 4 -> NULL 
+1.Create 
+2.Insert_begin 
+3.Insert_end 
+4.Insert_pos 
+5.Delete_begin 
+6.Delete_end 
+7.Delete_pos 
+8.Display 
+9.Reverse_display 
+10.Search 
+11.Sort 
+12.Exit 
+Enter choice:2
+Element to be inserted:9
+1.Create 
+2.Insert_begin 
+3.Insert_end 
+4.Insert_pos 
+5.Delete_begin 
+6.Delete_end 
+7.Delete_pos 
+8.Display 
+9.Reverse_display 
+10.Search 
+11.Sort 
+12.Exit 
+Enter choice:8
+9 -> 1 -> 2 -> 3 -> 4 -> NULL 
+1.Create 
+2.Insert_begin 
+3.Insert_end 
+4.Insert_pos 
+5.Delete_begin 
+6.Delete_end 
+7.Delete_pos 
+8.Display 
+9.Reverse_display 
+10.Search 
+11.Sort 
+12.Exit 
+Enter choice:3
+Element to be inserted:8
+1.Create 
+2.Insert_begin 
+3.Insert_end 
+4.Insert_pos 
+5.Delete_begin 
+6.Delete_end 
+7.Delete_pos 
+8.Display 
+9.Reverse_display 
+10.Search 
+11.Sort 
+12.Exit 
+Enter choice:8
+9 -> 1 -> 2 -> 3 -> 4 -> 8 -> NULL 
+1.Create 
+2.Insert_begin 
+3.Insert_end 
+4.Insert_pos 
+5.Delete_begin 
+6.Delete_end 
+7.Delete_pos 
+8.Display 
+9.Reverse_display 
+10.Search 
+11.Sort 
+12.Exit 
+Enter choice:4
+Element to be inserted and position:5 4
+1.Create 
+2.Insert_begin 
+3.Insert_end 
+4.Insert_pos 
+5.Delete_begin 
+6.Delete_end 
+7.Delete_pos 
+8.Display 
+9.Reverse_display 
+10.Search 
+11.Sort 
+12.Exit 
+Enter choice:8
+9 -> 1 -> 2 -> 5 -> 3 -> 4 -> 8 -> NULL 
+1.Create 
+2.Insert_begin 
+3.Insert_end 
+4.Insert_pos 
+5.Delete_begin 
+6.Delete_end 
+7.Delete_pos 
+8.Display 
+9.Reverse_display 
+10.Search 
+11.Sort 
+12.Exit 
+Enter choice:5
+Deleted data: 9 
+1.Create 
+2.Insert_begin 
+3.Insert_end 
+4.Insert_pos 
+5.Delete_begin 
+6.Delete_end 
+7.Delete_pos 
+8.Display 
+9.Reverse_display 
+10.Search 
+11.Sort 
+12.Exit 
+Enter choice:8
+1 -> 2 -> 5 -> 3 -> 4 -> 8 -> NULL 
+1.Create 
+2.Insert_begin 
+3.Insert_end 
+4.Insert_pos 
+5.Delete_begin 
+6.Delete_end 
+7.Delete_pos 
+8.Display 
+9.Reverse_display 
+10.Search 
+11.Sort 
+12.Exit 
+Enter choice:6
+Deleted data: 8 
+1.Create 
+2.Insert_begin 
+3.Insert_end 
+4.Insert_pos 
+5.Delete_begin 
+6.Delete_end 
+7.Delete_pos 
+8.Display 
+9.Reverse_display 
+10.Search 
+11.Sort 
+12.Exit 
+Enter choice:8
+1 -> 2 -> 5 -> 3 -> 4 -> NULL 
+1.Create 
+2.Insert_begin 
+3.Insert_end 
+4.Insert_pos 
+5.Delete_begin 
+6.Delete_end 
+7.Delete_pos 
+8.Display 
+9.Reverse_display 
+10.Search 
+11.Sort 
+12.Exit 
+Enter choice:7
+Enter position for deletion:3
+Deleted data: 5 
+1.Create 
+2.Insert_begin 
+3.Insert_end 
+4.Insert_pos 
+5.Delete_begin 
+6.Delete_end 
+7.Delete_pos 
+8.Display 
+9.Reverse_display 
+10.Search 
+11.Sort 
+12.Exit 
+Enter choice:8
+1 -> 2 -> 3 -> 4 -> NULL 
+1.Create 
+2.Insert_begin 
+3.Insert_end 
+4.Insert_pos 
+5.Delete_begin 
+6.Delete_end 
+7.Delete_pos 
+8.Display 
+9.Reverse_display 
+10.Search 
+11.Sort 
+12.Exit 
+Enter choice:9
+4 ->3 ->2 ->1 ->1.Create 
+2.Insert_begin 
+3.Insert_end 
+4.Insert_pos 
+5.Delete_begin 
+6.Delete_end 
+7.Delete_pos 
+8.Display 
+9.Reverse_display 
+10.Search 
+11.Sort 
+12.Exit 
+Enter choice:10
+Enter key:4
+Element found at 4 position1.Create 
+2.Insert_begin 
+3.Insert_end 
+4.Insert_pos 
+5.Delete_begin 
+6.Delete_end 
+7.Delete_pos 
+8.Display 
+9.Reverse_display 
+10.Search 
+11.Sort 
+12.Exit 
+Enter choice:11
+1.Create 
+2.Insert_begin 
+3.Insert_end 
+4.Insert_pos 
+5.Delete_begin 
+6.Delete_end 
+7.Delete_pos 
+8.Display 
+9.Reverse_display 
+10.Search 
+11.Sort 
+12.Exit 
+Enter choice:8
+1 -> 2 -> 3 -> 4 -> NULL 
+1.Create 
+2.Insert_begin 
+3.Insert_end 
+4.Insert_pos 
+5.Delete_begin 
+6.Delete_end 
+7.Delete_pos 
+8.Display 
+9.Reverse_display 
+10.Search 
+11.Sort 
+12.Exit 
+Enter choice:
+
+*/
+	
 
 
 
