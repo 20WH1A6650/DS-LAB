@@ -64,7 +64,8 @@ int main(){
     }
 }
 
-OUTPUT:
+
+  /* OUTPUT:
 
 1 - enqueue
 2 - dequeue
@@ -190,3 +191,4 @@ queue underflow
 enter your choice
 4
 
+*/
