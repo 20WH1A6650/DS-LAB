@@ -1,66 +1,80 @@
+
 #include<stdio.h>
 #include<stdlib.h>
+#define size 5
 struct node{
     int data;
-    struct node*link;
+    struct node *link;
 };
-struct node*front = NULL,*rear = NULL,*cur;
-void enqueue(int ele){
+struct node *front = NULL,*rear = NULL,*cur;
+void enqueue(){
     cur = (struct node*)malloc(sizeof(struct node));
-    cur->data = ele;
-    cur->link = NULL;
-    if(front==NULL){
+    printf("enter data\n");
+    scanf("%d",&cur -> data);
+    cur -> link = NULL;
+    if(front == NULL){
         front = rear = cur;
     }
     else{
-        rear->link = cur;
+        rear -> link = cur;
         rear = cur;
     }
 }
-void dequeue(){
+int dequeue(){
     if(front == NULL){
-        printf("Queue underflow");
+        printf("queue underflow\n");
     }
-    else if(front == rear){
-        printf("deleted element is %d",front->data);
+else if(rear == front){
+        printf("deleted element %d\n",front -> data);
         front = rear = NULL;
     }
     else{
-        printf("deleted element is %d",front->data);
-        front=front->link;
+        printf("deleted element %d\n",front -> data);
+        front = front -> link;
     }
-}
+  }
 void display(){
+    printf("elements are:\n");
     if(front == NULL){
-        printf("Queue is empty");
+        printf("queue underflow\n");
     }
     else{
         cur = front;
-        while(cur!=NULL){
-            printf("%d\n",cur->data);
-            cur = cur->link;
+        while(cur != NULL){
+            printf("%d\n",cur -> data);
+            cur = cur -> link;
         }
     }
 }
 int main(){
     int ch,ele;
     while(1){
-        printf("\n 1-enqueue \n 2-dequeue \n 3-display \n 4-exit \n");
-        printf("Enter your choice :");
+        printf("1 - enqueue\n2 - dequeue\n3 - display\n4 - exit\n");
+        printf("enter your choice\n");
         scanf("%d",&ch);
         switch(ch){
-            case 1 : printf("Enter element to be inserted :");
-                     scanf("%d",&ele);
-                     enqueue(ele);
-                     break;
-            case 2 :
-                     dequeue();
-                     break;
-            case 3 : display();
-                     break;
-            case 4 : exit(0);
-
-       }
+            case 1:
+            enqueue();
+            break;
+            case 2:
+            if(front == NULL){
+                printf("queue underflow\n");
+            }
+            else{
+                dequeue();
+            }
+            break;
+            case 3:
+            if(front == NULL){
+                printf("queue underflow\n");
+            }
+            else{
+                display();
+            }
+            break;
+            case 4:
+            exit(0);
+        }
     }
 }
 
