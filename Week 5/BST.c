@@ -1,3 +1,91 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+struct node{
+	int data;
+	struct node* left;
+	struct node* right;
+};
+
+struct node* root = NULL, *temp, *cur;
+
+struct node* create(){
+	cur = (struct node*)malloc(sizeof(struct node));
+	printf("Enter node data: ");
+	scanf("%d", &(cur -> data));
+	cur -> left = NULL;
+	cur -> right = NULL;
+	if(root == NULL)
+		root = cur;
+	else{
+		temp = root;
+		while(temp != NULL){
+			if(cur -> data < temp -> data && temp -> left == NULL){
+				temp -> left = cur;
+				return root;
+			}
+			else if(cur -> data < temp -> data && temp -> left != NULL){
+				temp = temp -> left;
+			}
+			else if(cur -> data > temp -> data && temp -> right == NULL){
+				temp -> right = cur;
+				return root;
+			}
+			else if(cur -> data > temp -> data && temp -> right != NULL){
+                 temp = temp -> right;
+			}
+		}
+	}
+}
+
+void inOrder(struct node* root){
+	if(root != NULL){
+		inOrder(root -> left);
+		printf("%d ", root -> data);
+		inOrder(root -> right);
+	}
+}
+
+void preOrder(struct node* root){
+	if(root != NULL){
+		printf("%d ", root -> data);
+		preOrder(root -> left);
+		preOrder(root -> right);
+	}
+}
+
+void postOrder(struct node* root){
+	if(root != NULL){
+		postOrder(root -> left);
+		postOrder(root -> right);
+		printf("%d ", root -> data);
+	}
+}
+
+int main(){
+	int choice;
+	while(1){
+		printf("1.create \n2.inorder \n3.preorder \n4.postorder \n5.exit\n");
+		printf("\nEnter your choice: "); 
+		scanf("%d", &choice);
+		switch(choice){
+			case 1:
+				root = create();
+				break;
+			case 2:
+				inOrder(root);
+				break;
+			case 3:
+				preOrder(root);
+				break;
+			case 4:
+				postOrder(root);
+				break;
+			case 5:
+				exit(0);
+		}
+	}
+}
 
 
 
